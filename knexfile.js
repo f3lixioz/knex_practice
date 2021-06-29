@@ -11,7 +11,7 @@ module.exports = {
 
   development: {
     client: 'pg',
-    connection: 'postgres://pg-docker:docker@localhost/knexdb'
+    connection: 'postgres://postgres:docker@localhost/movie_junkies_dev'
     // replace USER_NAME, USER_PASSWORD, and DATABASE_NAME with your Docker PostgreSQL container's username, password and an *empty* database
     // that you have created on your Docker PostgreSQL container volume
   },
@@ -19,9 +19,9 @@ module.exports = {
   staging: {
     client: 'postgresql',
     connection: {
-      database: 'knexdb',
-      user:     'pg-docker',
-      password: 'docker'
+      database: 'my_db',
+      user:     'username',
+      password: 'password'
     },
     pool: {
       min: 2,
@@ -35,9 +35,9 @@ module.exports = {
   production: {
     client: 'postgresql',
     connection: {
-      database: 'knexdb',
-      user:     'pg-docker',
-      password: 'docker'
+      database: 'my_db',
+      user:     'username',
+      password: 'password'
     },
     pool: {
       min: 2,
